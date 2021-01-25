@@ -1,10 +1,10 @@
-# Project Overview
-
-## On The Rocks
+# On The Rocks
 
 Users will be able to look up cocktail ingredients and recipes based on their spirit of choice
 
 ## API and Data Sample
+
+[TheCocktailDB](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
 
 [Cocktails API, by alcohol type](https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Tequila)
 
@@ -76,7 +76,7 @@ Mobile (portrait) view:
 #### MVP 
 
 - clickable buttons for each different alcohol type
-- when clicked, a list of cocktail "recipe cards" will appear with an image, ingredient list, and instructions on how to make the cocktail
+- when clicked, "recipe cards" of cocktails containing the selected alcohol will appear with an image, ingredient list, and instructions on how to make the cocktail
 - when a different alcohol is selected, clear the previous selection/cocktail recipe cards
 
 #### PostMVP  
