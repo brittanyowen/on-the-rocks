@@ -12,10 +12,14 @@ async function searchByAlcohol(id) {
     // console.log(info[0])
     // console.log(info[0].idDrink)
     
+    let drinkId = ''
+    // console.log('at declaration', drinkId)
     info.forEach(function (info) {
       getDrinkInfo(info)
+      drinkId = info.idDrink
+      searchByDrinkId(drinkId)
     })
-
+    
   }
   catch (error) { 
     console.log(error)
@@ -28,12 +32,22 @@ async function searchByDrinkId(drinkId) {
   
   try {
     const results2 = await axios.get(url2)
-    const recipeInfo = results2.data.drinks
+    const recipeInfo = results2.data
     console.log(recipeInfo)
 
-    recipeInfo.forEach(function (recipeInfo) {
-      getRecipeInfo(recipeInfo)
-    })
+    // recipeInfo.forEach(function (recipeInfo) {
+    //   // let drinkName = recipeInfo.strDrink
+    //   // let drinkContainer = document.querySelector('p')
+    //   // let drinkClass = drinkContainer.getAttribute('class')
+    //   // console.log(drinkName)
+    //   // console.log(drinkClass)
+    //   // if (drinkName === drinkClass) {
+    //     getRecipeInfo(recipeInfo)
+    //   // }
+    //   // drinkContainer = drinkContainer.nextSibling
+    //   // console.log('after if statement',drinkContainer)
+    // })
+
   }
   catch (error) {
     console.log(error)
@@ -43,7 +57,6 @@ async function searchByDrinkId(drinkId) {
 // event listeners on each button 
 // reassigns the id each time a button is clicked
 // id is then passed as the parameter of searchByAlcohol
-
 buttons = document.querySelector('div')
 
 buttons.addEventListener('click', (e) => {
@@ -55,6 +68,7 @@ buttons.addEventListener('click', (e) => {
 
 
 function getDrinkInfo(info) {
+
   const drinkInfo = `
   <h1>${info.strDrink}</h1>
   <img src="${info.strDrinkThumb}" alt="picture of ${info.strDrink} cocktail"/>
@@ -62,15 +76,10 @@ function getDrinkInfo(info) {
   
   let recipeContainer = document.querySelector('.cocktails')
   let newContainer = document.createElement('p')
-  newContainer.setAttribute('class', `${info.strDrink}`)
+  newContainer.setAttribute('class', `${info.idDrink}`)
   recipeContainer.append(newContainer)
   newContainer.insertAdjacentHTML('beforeend', drinkInfo)
-  
-  
-  let drinkId = info.idDrink
-  console.log(drinkId)
-  
-  searchByDrinkId(drinkId)
+
 }
 
 
@@ -85,10 +94,10 @@ function getRecipeInfo(recipeInfo) {
   `
 
   let recipeContainer = document.querySelector('div p')
-  console.log(recipeContainer)
   let ingredientContainer = document.createElement('ul')
   recipeContainer.append(ingredientContainer)
   ingredientContainer.insertAdjacentHTML('beforeend', recipeDetails)
+  console.log(recipeContainer)
 
 }
 
