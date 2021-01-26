@@ -103,17 +103,20 @@ Mobile (portrait) view:
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML & CSS Structure | H | 1hr| 0hrs | 0hrs |
-| Pseudocode Javascript | M | 2hr| 0hrs | 0hrs |
-| Add/test axios API call | H | 3hrs| 0hrs | 0hrs |
-| Add/test second API call | H | 3hrs| 0hrs | 0hrs |
-| Adding clickable buttons & event listeners | H | 2hrs| 0hrs | 0hrs |
-| JS clear results page before next results show | H | 3hrs| 0hrs | 0hrs |
-| Incorporating Flexbox & styling CSS | M | 3hrs| 0hrs | 0hrs |
-| Setting & styling Media Queries in CSS | M | 3hrs| 0hrs | 0hrs |
-| Styling buttons | L | 1.5hrs| 0hrs | 0hrs |
-| Setting Background image | L | .5hrs| 0hrs | 0hrs |
-| Total | H | 22hrs| 0hrs | 0hrs |
+| HTML & CSS Structure | H | 1hr | 0hrs | 0hrs |
+| Pseudocode Javascript | M | 2hr3 | 0hrs | 0hrs |
+| Adding clickable buttons & event listeners | H | 3hrs | 0hrs | 0hrs |
+| Add/test axios API call | H | 3hrs | 0hrs | 0hrs |
+| Pulling appropriate data from API | H | 3hrs | 0hrs | 0hrs |
+| Add/test second API call | H | 3hrs | 0hrs | 0hrs |
+| Pulling appropriate data from second API| H | 3hrs | 0hrs | 0hrs |
+| JS clear results page before next results show | H | 3hrs | 0hrs | 0hrs |
+| Incorporating Flexbox | M | 1hr | 0hrs | 0hrs |
+| Styling recipe cards in CSS | M | 3hrs | 0hrs | 0hrs |
+| Setting & styling Media Queries in CSS | M | 3hrs | 0hrs | 0hrs |
+| Styling buttons | L | 1.5hrs | 0hrs | 0hrs |
+| Setting Background image | L | .5hrs | 0hrs | 0hrs |
+| Total | H | 30hrs | 0hrs | 0hrs |
 
 ## Code Snippet
 
