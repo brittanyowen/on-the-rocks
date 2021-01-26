@@ -1,0 +1,16 @@
+body {
+  margin: 10px auto;
+  text-align: center;
+  width: 75%;
+  background-color: rgb(170, 170, 170);
+}
+
+h1 {
+  border: 2px solid black;
+
+}
+
+.alcohol {
+  display: flex; 
+  justify-content: center;
+}
