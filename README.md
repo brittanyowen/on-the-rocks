@@ -88,7 +88,7 @@ Mobile (portrait) view:
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 25| Test Cocktail API / complete README.md file / get project approved | Incomplete
+|Jan 25| Test Cocktail API / complete README.md file / get project approved | Complete
 |Jan 26| Basic HTML & CSS structure / pseudocode JS file & add axios api call for cocktails by alcohol type  | Incomplete
 |Jan 27| Add buttons and event listeners / add second axios api call for cocktails by drink-id | Incomplete
 |Jan 28| Display multiple cocktail "recipe cards" for each alcohol type / Remove previous selection results before loading next selection results | Incomplete
@@ -103,8 +103,8 @@ Mobile (portrait) view:
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML & CSS Structure | H | 1hr | 0hrs | 0hrs |
-| Pseudocode Javascript | M | 2hrs | 0hrs | 0hrs |
+| HTML & CSS Structure | H | 1hr | .5hrs | .5hrs |
+| Pseudocode Javascript | M | 2hrs | .5hrs | 0hrs |
 | Adding clickable buttons & event listeners | H | 3hrs | 0hrs | 0hrs |
 | Add/test axios API call | H | 3hrs | 0hrs | 0hrs |
 | Pulling appropriate data from API | H | 3hrs | 0hrs | 0hrs |
@@ -116,7 +116,7 @@ Mobile (portrait) view:
 | Setting & styling Media Queries in CSS | M | 3hrs | 0hrs | 0hrs |
 | Styling buttons | L | 1.5hrs | 0hrs | 0hrs |
 | Setting Background image | L | .5hrs | 0hrs | 0hrs |
-| Total | H | 30hrs | 0hrs | 0hrs |
+| Total | H | 30hrs | .5hrs | .5hrs |
 
 ## Code Snippet
 
