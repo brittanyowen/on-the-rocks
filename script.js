@@ -7,22 +7,19 @@ async function searchByAlcohol(id) {
   try {
     const results = await axios.get(url)
     const info = results.data.drinks
-    console.log(results)
-    console.log(info)
-    console.log(info[0])
-    console.log(info[0].idDrink)
+    // console.log(results)
+    // console.log(info)
+    // console.log(info[0])
+    // console.log(info[0].idDrink)
     
     info.forEach(function (info) {
       getDrinkInfo(info)
     })
-    
-    
+
   }
   catch (error) { 
     console.log(error)
   }
-  
-  
 }
 
 
@@ -43,15 +40,19 @@ async function searchByDrinkId(drinkId) {
   }
 }
 
+// event listeners on each button 
+// reassigns the id each time a button is clicked
+// id is then passed as the parameter of searchByAlcohol
 
 buttons = document.querySelector('div')
-console.log(buttons)
+
 buttons.addEventListener('click', (e) => {
   e.preventDefault()
   let id = (e.target).textContent
   searchByAlcohol(id)
-  searchByDrinkId()
 })
+
+
 
 function getDrinkInfo(info) {
   const drinkInfo = `
@@ -61,15 +62,18 @@ function getDrinkInfo(info) {
   
   let recipeContainer = document.querySelector('.cocktails')
   let newContainer = document.createElement('p')
-  newContainer.setAttribute('class', 'info')
+  newContainer.setAttribute('class', `${info.strDrink}`)
   recipeContainer.append(newContainer)
   newContainer.insertAdjacentHTML('beforeend', drinkInfo)
   
+  
   let drinkId = info.idDrink
   console.log(drinkId)
+  
   searchByDrinkId(drinkId)
- 
 }
+
+
 
 function getRecipeInfo(recipeInfo) {
   const recipeDetails = `
@@ -80,15 +84,13 @@ function getRecipeInfo(recipeInfo) {
   <p>${recipeInfo.strInstructions}</p>
   `
 
-  let recipeContainer = document.querySelector('.info')
+  let recipeContainer = document.querySelector('div p')
+  console.log(recipeContainer)
   let ingredientContainer = document.createElement('ul')
   recipeContainer.append(ingredientContainer)
   ingredientContainer.insertAdjacentHTML('beforeend', recipeDetails)
 
-
-
 }
-
 
 
 
