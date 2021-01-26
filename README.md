@@ -104,7 +104,7 @@ Mobile (portrait) view:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | HTML & CSS Structure | H | 1hr | 0hrs | 0hrs |
-| Pseudocode Javascript | M | 2hr3 | 0hrs | 0hrs |
+| Pseudocode Javascript | M | 2hrs | 0hrs | 0hrs |
 | Adding clickable buttons & event listeners | H | 3hrs | 0hrs | 0hrs |
 | Add/test axios API call | H | 3hrs | 0hrs | 0hrs |
 | Pulling appropriate data from API | H | 3hrs | 0hrs | 0hrs |
