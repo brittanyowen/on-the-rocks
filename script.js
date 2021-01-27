@@ -7,19 +7,13 @@ async function searchByAlcohol(id) {
   try {
     const results = await axios.get(url)
     const info = results.data.drinks
-    // console.log(results)
-    // console.log(info)
-    // console.log(info[0])
-    // console.log(info[0].idDrink)
-    
-    let drinkId = ''
-    // console.log('at declaration', drinkId)
+    console.log(info)
+
     info.forEach(function (info) {
       getDrinkInfo(info)
-      drinkId = info.idDrink
-      searchByDrinkId(drinkId)
+      let drinkId = null
     })
-    
+
   }
   catch (error) { 
     console.log(error)
@@ -32,21 +26,10 @@ async function searchByDrinkId(drinkId) {
   
   try {
     const results2 = await axios.get(url2)
-    const recipeInfo = results2.data
+    const recipeInfo = results2.data.drinks
     console.log(recipeInfo)
 
-    // recipeInfo.forEach(function (recipeInfo) {
-    //   // let drinkName = recipeInfo.strDrink
-    //   // let drinkContainer = document.querySelector('p')
-    //   // let drinkClass = drinkContainer.getAttribute('class')
-    //   // console.log(drinkName)
-    //   // console.log(drinkClass)
-    //   // if (drinkName === drinkClass) {
-    //     getRecipeInfo(recipeInfo)
-    //   // }
-    //   // drinkContainer = drinkContainer.nextSibling
-    //   // console.log('after if statement',drinkContainer)
-    // })
+    getRecipeInfo(recipeInfo[0])
 
   }
   catch (error) {
@@ -79,6 +62,9 @@ function getDrinkInfo(info) {
   newContainer.setAttribute('class', `${info.idDrink}`)
   recipeContainer.append(newContainer)
   newContainer.insertAdjacentHTML('beforeend', drinkInfo)
+  
+  drinkId = info.idDrink
+  searchByDrinkId(drinkId)
 
 }
 
@@ -92,12 +78,11 @@ function getRecipeInfo(recipeInfo) {
   <li>${recipeInfo.strMeasure4} ${recipeInfo.strIngredient4}</li>
   <p>${recipeInfo.strInstructions}</p>
   `
-
+  
   let recipeContainer = document.querySelector('div p')
   let ingredientContainer = document.createElement('ul')
   recipeContainer.append(ingredientContainer)
   ingredientContainer.insertAdjacentHTML('beforeend', recipeDetails)
-  console.log(recipeContainer)
 
 }
 
