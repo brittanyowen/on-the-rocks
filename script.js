@@ -9,11 +9,12 @@ async function searchByAlcohol(id) {
     const info = results.data.drinks
     console.log(info)
 
-    info.forEach(function (info) {
-      getDrinkInfo(info)
-      let drinkId = null
+    
+    info.forEach((info) => {
+      // getDrinkInfo(info)
+      searchByDrinkId(info.idDrink)
     })
-
+    
   }
   catch (error) { 
     console.log(error)
@@ -26,10 +27,12 @@ async function searchByDrinkId(drinkId) {
   
   try {
     const results2 = await axios.get(url2)
-    const recipeInfo = results2.data.drinks
+    const recipeInfo = results2.data.drinks[0]
     console.log(recipeInfo)
+    
+    console.log(drinkId)
 
-    getRecipeInfo(recipeInfo[0])
+    getRecipeInfo(recipeInfo)
 
   }
   catch (error) {
@@ -52,37 +55,81 @@ buttons.addEventListener('click', (e) => {
 
 function getDrinkInfo(info) {
 
-  const drinkInfo = `
-  <h1>${info.strDrink}</h1>
-  <img src="${info.strDrinkThumb}" alt="picture of ${info.strDrink} cocktail"/>
-  `
+  // const drinkInfo = `
+  // <h1>${info.strDrink}</h1>
+  // <img src="${info.strDrinkThumb}" alt="picture of ${info.strDrink} cocktail"/>
+  // `
   
-  let recipeContainer = document.querySelector('.cocktails')
-  let newContainer = document.createElement('p')
-  newContainer.setAttribute('class', `${info.idDrink}`)
-  recipeContainer.append(newContainer)
-  newContainer.insertAdjacentHTML('beforeend', drinkInfo)
+  // let recipeContainer = document.querySelector('.cocktails')
+  // let newContainer = document.createElement('p')
+  // newContainer.setAttribute('class', `${info.idDrink}`)
+  // recipeContainer.append(newContainer)
+  // newContainer.insertAdjacentHTML('beforeend', drinkInfo)
   
-  drinkId = info.idDrink
-  searchByDrinkId(drinkId)
+  console.log(info)
+  // searchByDrinkId(info.idDrink)
+  // drinkId = info.idDrink
+  // console.log(drinkId)
+
 
 }
 
 
-
 function getRecipeInfo(recipeInfo) {
   const recipeDetails = `
+  <h1>${recipeInfo.strDrink}</h1>
+  <img src="${recipeInfo.strDrinkThumb}" alt="picture of ${recipeInfo.strDrink} cocktail"/>
+  <ul>
+  <h2>Ingredients:</h2>
   <li>${recipeInfo.strMeasure1} ${recipeInfo.strIngredient1}</li>
   <li>${recipeInfo.strMeasure2} ${recipeInfo.strIngredient2}</li>
   <li>${recipeInfo.strMeasure3} ${recipeInfo.strIngredient3}</li>
   <li>${recipeInfo.strMeasure4} ${recipeInfo.strIngredient4}</li>
-  <p>${recipeInfo.strInstructions}</p>
+  <li>${recipeInfo.strMeasure5} ${recipeInfo.strIngredient5}</li>
+  <li>${recipeInfo.strMeasure6} ${recipeInfo.strIngredient6}</li>
+  <li>${recipeInfo.strMeasure7} ${recipeInfo.strIngredient7}</li>
+  <li>${recipeInfo.strMeasure8} ${recipeInfo.strIngredient8}</li>
+  <li>${recipeInfo.strMeasure9} ${recipeInfo.strIngredient9}</li>
+  <li>${recipeInfo.strMeasure10} ${recipeInfo.strIngredient10}</li>
+  <li>${recipeInfo.strMeasure11} ${recipeInfo.strIngredient11}</li>
+  <li>${recipeInfo.strMeasure12} ${recipeInfo.strIngredient12}</li>
+  <li>${recipeInfo.strMeasure13} ${recipeInfo.strIngredient13}</li>
+  <li>${recipeInfo.strMeasure14} ${recipeInfo.strIngredient14}</li>
+  <li>${recipeInfo.strMeasure15} ${recipeInfo.strIngredient15}</li>
+  </ul>
+  <p>Recipe: ${recipeInfo.strInstructions}</p>
   `
-  
-  let recipeContainer = document.querySelector('div p')
-  let ingredientContainer = document.createElement('ul')
-  recipeContainer.append(ingredientContainer)
-  ingredientContainer.insertAdjacentHTML('beforeend', recipeDetails)
+  console.log(recipeInfo)
+
+  let recipeContainer = document.querySelector('.cocktails')
+  let newContainer = document.createElement('p')
+  // newContainer.setAttribute('class', `${info.idDrink}`)
+  recipeContainer.append(newContainer)
+  newContainer.insertAdjacentHTML('beforeend', recipeDetails)
+
+
+  // console.log(recipeContainer)
+  // console.log(recipeContainer.nextElementSibling.lastElementChild)
+  // let recipeChild = recipeContainer.nextElementSibling.lastElementChild
+  // console.log(recipeChild.hasAttributes)
+  // console.log(recipeContainer.getAttribute('class'))
+  // console.log(recipeInfo[0].idDrink)
+
+  // if (recipeContainer.getAttribute('class') === recipeInfo[0].idDrink) {
+    // let ingredientContainer = document.createElement('p')
+    // recipeContainer.append(ingredientContainer)
+    // ingredientContainer.insertAdjacentHTML('beforeend', recipeDetails)
+  // } else if (recipeContainer.nextElementSibling.lastChild) {
+  //   let ingredientContainer = document.createElement('ul')
+  //   recipeContainer.append(ingredientContainer)
+  //   ingredientContainer.insertAdjacentHTML('beforeend', recipeDetails)
+  // }
+
+  // if (recipeChild.getAttribute === img) {
+
+  // }
+
+  return recipeDetails
 
 }
 

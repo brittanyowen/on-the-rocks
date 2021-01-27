@@ -90,7 +90,7 @@ Mobile (portrait) view:
 |---|---| ---|
 |Jan 25| Test Cocktail API / complete README.md file / get project approved | Complete
 |Jan 26| Basic HTML & CSS structure / pseudocode JS file & add axios api call for cocktails by alcohol type  | Complete
-|Jan 27| Add buttons and event listeners / add second axios api call for cocktails by drink-id | Incomplete
+|Jan 27| Add buttons and event listeners / add second axios api call for cocktails by drink-id | Complete
 |Jan 28| Display multiple cocktail "recipe cards" for each alcohol type / Remove previous selection results before loading next selection results | Incomplete
 |Jan 29| Incorporate Flexbox into CSS / add media query for mobile screens | Incomplete
 |Feb 1| Presentations/Project Submission | Incomplete
@@ -108,15 +108,15 @@ Mobile (portrait) view:
 | Adding clickable buttons & event listeners | H | 3hrs | 1hrs | 1hrs |
 | Add/test axios API call | H | 3hrs | 1hrs | 1hrs |
 | Pulling appropriate data from API | H | 3hrs | 2hrs | 2hrs |
-| Add/test second API call | H | 3hrs | 2hrs | 0hrs |
-| Pulling appropriate data from second API| H | 3hrs | 2hrs | 0hrs |
+| Add/test second API call | H | 3hrs | 2hrs | 2hrs |
+| Pulling appropriate data from second API| H | 3hrs | 4hrs | 4hrs |
 | JS clear results page before next results show | H | 3hrs | 0hrs | 0hrs |
 | Incorporating Flexbox | M | 1hr | 0hrs | 0hrs |
 | Styling recipe cards in CSS | M | 3hrs | 0hrs | 0hrs |
 | Setting & styling Media Queries in CSS | M | 3hrs | 0hrs | 0hrs |
 | Styling buttons | L | 1.5hrs | 0hrs | 0hrs |
 | Setting Background image | L | .5hrs | 0hrs | 0hrs |
-| Total | H | 30hrs | 7hrs | 5hrs |
+| Total | H | 30hrs | 11hrs | 11hrs |
 
 ## Code Snippet
 
