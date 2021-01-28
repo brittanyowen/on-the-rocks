@@ -101,11 +101,23 @@ function removeNull() {
     let itemText = ingredientItem.textContent
     if (itemText === "null null" || itemText === ' ') {
       drinkCard.removeChild(drinkCard.lastElementChild)
-    } 
+    }
   }
 
-}
+  let numOfIngredients = document.getElementById(idValue).childElementCount
+  let drinkCard = document.getElementById(idValue)
 
+  
+  for (let i = 1; i <= numOfIngredients; i++) {
+    let currentItem = drinkCard.querySelector(`.item${i}`)
+    let currentText = currentItem.textContent
+
+    if (currentText.includes("null")) {
+      currentText = currentText.slice(5)
+      currentItem.textContent = currentText
+    }
+  }
+}
 
 function removeCocktails() {
   const removeInfo = document.querySelector('.cocktails')
