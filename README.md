@@ -109,14 +109,14 @@ Mobile (portrait) view:
 | Add/test axios API call | H | 3hrs | 1hrs | 1hrs |
 | Pulling appropriate data from API | H | 3hrs | 2hrs | 2hrs |
 | Add/test second API call | H | 3hrs | 2hrs | 2hrs |
-| Pulling appropriate data from second API| H | 3hrs | 6hrs | 6hrs |
+| Pulling appropriate data from second API| H | 3hrs | 9hrs | 9hrs |
 | JS clear results page before next results show | H | 3hrs | .5hrs | .5hrs |
 | Incorporating Flexbox | M | 1hr | 0hrs | 0hrs |
 | Styling recipe cards in CSS | M | 3hrs | 0hrs | 0hrs |
 | Setting & styling Media Queries in CSS | M | 3hrs | 0hrs | 0hrs |
 | Styling buttons | L | 1.5hrs | 0hrs | 0hrs |
 | Setting Background image | L | .5hrs | 0hrs | 0hrs |
-| Total | H | 30hrs | 11hrs | 11hrs |
+| Total | H | 30hrs | 14hrs | 14hrs |
 
 ## Code Snippet
 
