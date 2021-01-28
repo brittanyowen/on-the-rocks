@@ -110,7 +110,7 @@ Mobile (portrait) view:
 | Pulling appropriate data from API | H | 3hrs | 2hrs | 2hrs |
 | Add/test second API call | H | 3hrs | 2hrs | 2hrs |
 | Pulling appropriate data from second API| H | 3hrs | 4hrs | 4hrs |
-| JS clear results page before next results show | H | 3hrs | 0hrs | 0hrs |
+| JS clear results page before next results show | H | 3hrs | .5hrs | .5hrs |
 | Incorporating Flexbox | M | 1hr | 0hrs | 0hrs |
 | Styling recipe cards in CSS | M | 3hrs | 0hrs | 0hrs |
 | Setting & styling Media Queries in CSS | M | 3hrs | 0hrs | 0hrs |
