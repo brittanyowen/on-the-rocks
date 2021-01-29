@@ -41,8 +41,8 @@ buttons.addEventListener('click', (e) => {
   e.preventDefault()
   removeCocktails()
   let id = (e.target).textContent
-  let subtitle = document.querySelector('h2')
-  subtitle.textContent = `${id} Cocktails`
+  // let subtitle = document.querySelector('h2')
+  // subtitle.textContent = `${id} Cocktails`
   searchByAlcohol(id)
 })
 
