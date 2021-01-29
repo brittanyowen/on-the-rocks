@@ -50,8 +50,8 @@ buttons.addEventListener('click', (e) => {
 function getRecipeInfo(recipeInfo) {
   
   const recipeDetails = `
-  <h1>${recipeInfo.strDrink}</h1>
   <img src="${recipeInfo.strDrinkThumb}" alt="picture of ${recipeInfo.strDrink} cocktail"/>
+  <h1>${recipeInfo.strDrink}</h1>
   <h2>Ingredients:</h2>
   <ul class="list" id=${recipeInfo.idDrink}>
   <li class="item1">${recipeInfo.strMeasure1} ${recipeInfo.strIngredient1}</li>

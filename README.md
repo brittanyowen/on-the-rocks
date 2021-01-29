@@ -112,18 +112,26 @@ Mobile (portrait) view:
 | Pulling appropriate data from second API| H | 3hrs | 11hrs | 11hrs |
 | JS clear results page before next results show | H | 3hrs | .5hrs | .5hrs |
 | Incorporating Flexbox | M | 1hr | 3hrs | 3hrs |
-| Styling recipe cards in CSS | M | 3hrs | 3hrs | 3hrs |
-| Setting & styling Media Queries in CSS | M | 3hrs | 3hrs | 3hrs |
-| Styling buttons | L | 1.5hrs | 1hrs | 1hrs |
+| Styling recipe cards in CSS | M | 3hrs | 4hrs | 4hrs |
+| Setting & styling Media Queries in CSS | M | 3hrs | 4hrs | 4hrs |
+| Styling buttons | L | 1.5hrs | 2hrs | 2hrs |
 | Setting Background image | L | .5hrs | 1hrs | 1hrs |
-| Total | H | 30hrs | 29.5hrs | 29.5hrs |
+| Total | H | 30hrs | 32.5hrs | 32.5hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
 ```
+  let numOfIngredients = document.getElementById(idValue).childElementCount
+  
+  for (let i = 1; i <= numOfIngredients; i++) {
+    let currentItem = drinkCard.querySelector(`.item${i}`)
+    let currentText = currentItem.textContent
 
+    if (currentText.includes("null")) {
+      currentText = currentText.slice(5)
+      currentItem.textContent = currentText
+    }
+  }
 ```
 
 ## Change Log
