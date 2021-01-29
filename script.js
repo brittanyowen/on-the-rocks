@@ -7,12 +7,10 @@ async function searchByAlcohol(id) {
   try {
     const results = await axios.get(url)
     const info = results.data.drinks
-    // console.log(info)
 
     info.forEach((info) => {
       searchByDrinkId(info.idDrink)
     })
-
 
   }
   catch (error) { 
@@ -27,8 +25,7 @@ async function searchByDrinkId(drinkId) {
   try {
     const results2 = await axios.get(url2)
     const recipeInfo = results2.data.drinks[0]
-    // console.log(recipeInfo)
-    
+
     getRecipeInfo(recipeInfo)
 
   }
@@ -37,15 +34,15 @@ async function searchByDrinkId(drinkId) {
   }
 }
 
-// event listeners on each button 
-// reassigns the id each time a button is clicked
-// id is then passed as the parameter of searchByAlcohol
+
 buttons = document.querySelector('div')
 
 buttons.addEventListener('click', (e) => {
   e.preventDefault()
   removeCocktails()
   let id = (e.target).textContent
+  let subtitle = document.querySelector('h2')
+  subtitle.textContent = `${id} Cocktails`
   searchByAlcohol(id)
 })
 
@@ -83,7 +80,6 @@ function getRecipeInfo(recipeInfo) {
   
   removeNull()
 
-
 }
 
 
@@ -95,8 +91,9 @@ function removeNull() {
     idValue = list[i].getAttribute('id')
   }
 
+  let drinkCard = document.getElementById(idValue)
+
   for (let i = 0; i <= 15; i++) {
-    let drinkCard = document.getElementById(idValue)
     let ingredientItem = drinkCard.lastElementChild
     let itemText = ingredientItem.textContent
     if (itemText === "null null" || itemText === ' ') {
@@ -105,8 +102,6 @@ function removeNull() {
   }
 
   let numOfIngredients = document.getElementById(idValue).childElementCount
-  let drinkCard = document.getElementById(idValue)
-
   
   for (let i = 1; i <= numOfIngredients; i++) {
     let currentItem = drinkCard.querySelector(`.item${i}`)
@@ -119,15 +114,10 @@ function removeNull() {
   }
 }
 
+
 function removeCocktails() {
   const removeInfo = document.querySelector('.cocktails')
   while (removeInfo.lastChild) {
     removeInfo.removeChild(removeInfo.lastChild)
   }    
 }
-
-
-// pseudocode: 
-// Clear null values in ingredient list items 
-// write a function removeNull that identifies the list items that have an innerText value of "null null" or " "
-// remove list item if it has this innerText value  
