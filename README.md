@@ -113,10 +113,10 @@ Mobile (portrait) view:
 | JS clear results page before next results show | H | 3hrs | .5hrs | .5hrs |
 | Incorporating Flexbox | M | 1hr | 3hrs | 3hrs |
 | Styling recipe cards in CSS | M | 3hrs | 4hrs | 4hrs |
-| Setting & styling Media Queries in CSS | M | 3hrs | 4hrs | 4hrs |
+| Setting & styling Media Queries in CSS | M | 3hrs | 6hrs | 6hrs |
 | Styling buttons | L | 1.5hrs | 2hrs | 2hrs |
 | Setting Background image | L | .5hrs | 1hrs | 1hrs |
-| Total | H | 30hrs | 32.5hrs | 32.5hrs |
+| Total | H | 30hrs | 34.5hrs | 34.5hrs |
 
 ## Code Snippet
 
@@ -136,3 +136,4 @@ Mobile (portrait) view:
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
+ For mobile-size screens, I opted to move the alcohol buttons to the left side of the frame rather than have them span the width of the screen, as I had originally planned. The reason for this change was to preserve more screen space for the drink recipes. 

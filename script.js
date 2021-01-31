@@ -1,6 +1,28 @@
 // cocktails by alcohol type: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
 // cocktails by drink id w/full info: `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007`
 
+let dateOfBirth = document.getElementById('dob')
+let submitBtn = document.getElementById('submit')
+let message = document.getElementById('message')
+let ageContainer = document.querySelector('.age')
+message.style.display = "none"
+let alcoholBtns = document.querySelector('.alcohol')
+alcoholBtns.style.display = "none"
+
+function getBirthday(e) {
+  e.preventDefault
+  if (dateOfBirth.value < "2000") {
+    ageContainer.style.display = "none"
+    alcoholBtns.style.display = "inherit"
+  } else {
+    ageContainer.style.display = "none"
+    message.style.display = "initial"
+    message.textContent = 'Must be 21+ to enter the site'
+  }
+}
+
+submitBtn.addEventListener('click', getBirthday)
+
 async function searchByAlcohol(id) {
   const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
   
