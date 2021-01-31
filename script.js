@@ -11,8 +11,8 @@ alcoholBtns.style.display = "none"
 
 
 function getBirthday(e) {
+  e.preventDefault
   if (dateOfBirth.value < "2000") {
-    e.preventDefault
     ageContainer.style.display = "none"
     alcoholBtns.style.display = "inherit"
     message.style.display = "none"
@@ -44,6 +44,22 @@ async function searchByAlcohol(id) {
 }
 
 
+async function searchByDrinkId(drinkId) {
+  const url2 = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`
+  
+  try {
+    const results2 = await axios.get(url2)
+    const recipeInfo = results2.data.drinks[0]
+    
+    getRecipeInfo(recipeInfo)
+    
+  }
+  catch (error) {
+    console.log(error)
+  }
+}
+
+
 buttons = document.querySelector('div')
 
 buttons.addEventListener('click', (e) => {
@@ -52,23 +68,6 @@ buttons.addEventListener('click', (e) => {
   let id = (e.target).textContent
   searchByAlcohol(id)
 })
-
-
-async function searchByDrinkId(drinkId) {
-  const url2 = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`
-  
-  try {
-    const results2 = await axios.get(url2)
-    const recipeInfo = results2.data.drinks[0]
-
-    getRecipeInfo(recipeInfo)
-
-  }
-  catch (error) {
-    console.log(error)
-  }
-}
-
 
 function getRecipeInfo(recipeInfo) {
   
