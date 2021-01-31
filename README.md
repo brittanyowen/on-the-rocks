@@ -135,5 +135,4 @@ Mobile (portrait) view:
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
  For mobile-size screens, I opted to move the alcohol buttons to the left side of the frame rather than have them span the width of the screen, as I had originally planned. The reason for this change was to preserve more screen space for the drink recipes. 

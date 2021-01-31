@@ -9,19 +9,22 @@ message.style.display = "none"
 let alcoholBtns = document.querySelector('.alcohol')
 alcoholBtns.style.display = "none"
 
+
 function getBirthday(e) {
-  e.preventDefault
   if (dateOfBirth.value < "2000") {
+    e.preventDefault
     ageContainer.style.display = "none"
     alcoholBtns.style.display = "inherit"
+    message.style.display = "none"
   } else {
-    ageContainer.style.display = "none"
     message.style.display = "initial"
     message.textContent = 'Must be 21+ to enter the site'
   }
 }
 
+
 submitBtn.addEventListener('click', getBirthday)
+
 
 async function searchByAlcohol(id) {
   const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
@@ -41,6 +44,16 @@ async function searchByAlcohol(id) {
 }
 
 
+buttons = document.querySelector('div')
+
+buttons.addEventListener('click', (e) => {
+  e.preventDefault()
+  removeCocktails()
+  let id = (e.target).textContent
+  searchByAlcohol(id)
+})
+
+
 async function searchByDrinkId(drinkId) {
   const url2 = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`
   
@@ -55,18 +68,6 @@ async function searchByDrinkId(drinkId) {
     console.log(error)
   }
 }
-
-
-buttons = document.querySelector('div')
-
-buttons.addEventListener('click', (e) => {
-  e.preventDefault()
-  removeCocktails()
-  let id = (e.target).textContent
-  // let subtitle = document.querySelector('h2')
-  // subtitle.textContent = `${id} Cocktails`
-  searchByAlcohol(id)
-})
 
 
 function getRecipeInfo(recipeInfo) {
