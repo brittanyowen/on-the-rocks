@@ -1,4 +1,5 @@
 # On The Rocks
+https://brittanyowen.github.io/on-the-rocks/
 
 Users will be able to look up cocktail ingredients and recipes based on their spirit of choice
 
@@ -92,8 +93,8 @@ Mobile (portrait) view:
 |Jan 26| Basic HTML & CSS structure / pseudocode JS file & add axios api call for cocktails by alcohol type  | Complete
 |Jan 27| Add buttons and event listeners / add second axios api call for cocktails by drink-id | Complete
 |Jan 28| Display multiple cocktail "recipe cards" for each alcohol type / Remove previous selection results before loading next selection results | Complete
-|Jan 29| Incorporate Flexbox into CSS / add media query for mobile screens | Incomplete
-|Feb 1| Presentations/Project Submission | Incomplete
+|Jan 29| Incorporate Flexbox into CSS / add media query for mobile screens | Complete
+|Feb 1| Presentations/Project Submission | Complete
 
 ## Priority Matrix
 
@@ -104,9 +105,9 @@ Mobile (portrait) view:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | HTML & CSS Structure | H | 1hr | .5hrs | .5hrs |
-| Pseudocode Javascript | M | 2hrs | .5hrs | .5hrs |
-| Adding clickable buttons & event listeners | H | 3hrs | 1hrs | 1hrs |
-| Add/test axios API call | H | 3hrs | 1hrs | 1hrs |
+| Pseudocode Javascript | M | 2hrs | 1hr | 1hr |
+| Adding clickable buttons & event listeners | H | 3hrs | 1hr | 1hr |
+| Add/test axios API call | H | 3hrs | 1hr | 1hr |
 | Pulling appropriate data from API | H | 3hrs | 2hrs | 2hrs |
 | Add/test second API call | H | 3hrs | 2hrs | 2hrs |
 | Pulling appropriate data from second API| H | 3hrs | 11hrs | 11hrs |
@@ -115,8 +116,8 @@ Mobile (portrait) view:
 | Styling recipe cards in CSS | M | 3hrs | 4hrs | 4hrs |
 | Setting & styling Media Queries in CSS | M | 3hrs | 6hrs | 6hrs |
 | Styling buttons | L | 1.5hrs | 2hrs | 2hrs |
-| Setting Background image | L | .5hrs | 1hrs | 1hrs |
-| Total | H | 30hrs | 34.5hrs | 34.5hrs |
+| Setting Background image | L | .5hrs | 1hr | 1hr |
+| Total | H | 30hrs | 35hrs | 35hrs |
 
 ## Code Snippet
 
@@ -135,4 +136,8 @@ Mobile (portrait) view:
 ```
 
 ## Change Log
+ For desktop view, I removed the subtitle and the alcohol tiles above the buttons and placed the buttons at the bottom of the title block. This change was made for brevity. 
+
+ Did not make the buttons into alcohol bottles as listed in my post-MVP. I opted to keep the design simple. 
+
  For mobile-size screens, I opted to move the alcohol buttons to the left side of the frame rather than have them span the width of the screen, as I had originally planned. The reason for this change was to preserve more screen space for the drink recipes. 

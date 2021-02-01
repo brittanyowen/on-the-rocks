@@ -1,6 +1,5 @@
-// cocktails by alcohol type: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
-// cocktails by drink id w/full info: `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007`
 
+// global variables 
 let dateOfBirth = document.getElementById('dob')
 let submitBtn = document.getElementById('submit')
 let message = document.getElementById('message')
@@ -8,8 +7,13 @@ let ageContainer = document.querySelector('.age')
 message.style.display = "none"
 let alcoholBtns = document.querySelector('.alcohol')
 alcoholBtns.style.display = "none"
+buttons = document.querySelector('div')
+let recipeContainer = document.querySelector('.cocktails')
+const list = document.getElementsByTagName('ul')
 
 
+// logs and checks user's birthday 
+// under 21, show message; over 21, show alcohol buttons and hide birthday query 
 function getBirthday(e) {
   e.preventDefault
   if (dateOfBirth.value < "2000") {
@@ -26,6 +30,8 @@ function getBirthday(e) {
 submitBtn.addEventListener('click', getBirthday)
 
 
+// completes the url with the id selected and grabs the idDrink value 
+// calls searchByDrinkId function 
 async function searchByAlcohol(id) {
   const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
   
@@ -44,6 +50,8 @@ async function searchByAlcohol(id) {
 }
 
 
+// completes the 2nd url with the drink id to get access to the individual drink details
+// calls getRecipeInfo function
 async function searchByDrinkId(drinkId) {
   const url2 = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`
   
@@ -60,8 +68,8 @@ async function searchByDrinkId(drinkId) {
 }
 
 
-buttons = document.querySelector('div')
-
+// event listener for alcohol buttons, assigns the id variable accordingly
+// calls removeCocktails function then searchByAlcohol function
 buttons.addEventListener('click', (e) => {
   e.preventDefault()
   removeCocktails()
@@ -69,6 +77,9 @@ buttons.addEventListener('click', (e) => {
   searchByAlcohol(id)
 })
 
+
+// selects details to pull to DOM
+// calls removeNull function
 function getRecipeInfo(recipeInfo) {
   
   const recipeDetails = `
@@ -95,7 +106,6 @@ function getRecipeInfo(recipeInfo) {
   <h2>Recipe:</h2>
   <p>${recipeInfo.strInstructions}</p>
   `
-  let recipeContainer = document.querySelector('.cocktails')
   let newContainer = document.createElement('p')
   newContainer.insertAdjacentHTML('beforeend', recipeDetails)  
   recipeContainer.append(newContainer)
@@ -105,14 +115,14 @@ function getRecipeInfo(recipeInfo) {
 }
 
 
+// filters the data pulled to omit null values 
 function removeNull() {
-  const list = document.getElementsByTagName('ul')
   let idValue = ''
   
   for (let i = 0; i < list.length; i++) {
     idValue = list[i].getAttribute('id')
   }
-
+  
   let drinkCard = document.getElementById(idValue)
 
   for (let i = 0; i <= 15; i++) {
@@ -137,9 +147,9 @@ function removeNull() {
 }
 
 
+// clears page before next alcohol category is selected 
 function removeCocktails() {
-  const removeInfo = document.querySelector('.cocktails')
-  while (removeInfo.lastChild) {
-    removeInfo.removeChild(removeInfo.lastChild)
+  while (recipeContainer.lastChild) {
+    recipeContainer.removeChild(recipeContainer.lastChild)
   }    
 }
